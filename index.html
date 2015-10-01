@@ -17,17 +17,23 @@
         <h1>Angular Datetime Picker</h1>
 
         <p>Native AngularJS datetime picker directive styled by Twitter Bootstrap</p>
+        <p>version 0.3.14</p>
 
         <p class="btn-group">
-            <a class="btn btn-default" href="https://github.com/dalelotts/angular-bootstrap-datetimepicker"><i class="icon-github"></i> Code on Github</a>
-            <a  class="btn btn-primary" href="https://github.com/dalelotts/angular-bootstrap-datetimepicker/zipball/master">
-                <i class="icon-download-alt icon-white"></i>Download  <small>(zip file)</small>
+            <a class="btn btn-default" href="https://github.com/dalelotts/angular-bootstrap-datetimepicker"><i
+                    class="icon-github"></i> Code on Github</a>
+            <a class="btn btn-primary"
+               href="https://github.com/dalelotts/angular-bootstrap-datetimepicker/zipball/master">
+                <i class="icon-download-alt icon-white"></i>Download
+                <small>(zip file)</small>
             </a>
-            <a  class="btn btn-primary" href="https://github.com/dalelotts/angular-bootstrap-datetimepicker/tarball/master">
-                <i class="icon-download-alt icon-white"></i>Download  <small>(Tar ball)</small>
+            <a class="btn btn-primary"
+               href="https://github.com/dalelotts/angular-bootstrap-datetimepicker/tarball/master">
+                <i class="icon-download-alt icon-white"></i>Download
+                <small>(Tar ball)</small>
             </a>
         </p>
-    </div>
+ </div>
     <div class="bs-docs-social">
         <div class="container">
             <ul class="bs-docs-social-buttons">
@@ -42,17 +48,17 @@
     </div>
 </header>
 
-<div class="container main" ng-app="ui.bootstrap.datetimepicker">
+<div class="container main" data-ng-app="ui.bootstrap.datetimepicker">
 
     <section id="inline">
-      <div class="page-header">
-        <h2>Examples</h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <h3>Embedded calendar </h3>
+        <div class="page-header">
+            <h2>Examples</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Embedded calendar </h3>
 
-          <p>Display a calendar embedded in the page.</p>
+                <p>Display a calendar embedded in the page.</p>
 
           <div class="well">
             Selected Date: {{ data.embeddedDate | date:'yyyy-MMM-dd' }}
@@ -115,12 +121,10 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <datetimepicker data-ng-model="data.dateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"/>
+                        <datetimepicker data-ng-model="data.dateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"></datetimepicker>
                     </ul>
                 </div>
             </div>
-
-
         </div>
         <div class="col-sm-6">
             <h3>Why?</h3>
@@ -136,61 +140,138 @@
     <hr/>
 
     <h2>Callback functions</h2>
-    <section id="onSetTime">
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>on-set-time</h3>
-                <p>Function. Default: <code>null</code></p>
-                <p>If the value of the on-set-time attribute (not a config option) is a function, the date time picker will call this function passing in the selected value and previous value.</p>
-            </div>
+    <section id="beforeRender">
+        <h3><a id="user-content-before-render" class="anchor" href="#before-render" aria-hidden="true"><span
+                class="octicon octicon-link"></span></a>before-render</h3>
+
+        <p>Attribute on datetimepicker element</p>
+        <p>Function. Default: <code>null</code></p>
+
+        <p>If the value of the before-render attribute is a function, the date time picker will call this function
+            before rendering a new view, passing in data about the view.</p>
+
+        <div class="highlight highlight-text-html-basic">
+            <pre>&lt;<span class="pl-ent">datetimepicker</span> <span class="pl-e">data-ng-model</span>=<span
+                    class="pl-s"><span class="pl-pds">"</span>data.date<span class="pl-pds">"</span></span> <span
+                    class="pl-e">data-before-render</span>=<span class="pl-s"><span class="pl-pds">"</span>beforeRender($view, $dates, $leftDate, $upDate, $rightDate)<span
+                    class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">datetimepicker</span>&gt;</pre>
         </div>
+
+        <p>This function will be called every time a new view is rendered.</p>
+
+        <div class="highlight highlight-source-js">
+<pre><span class="pl-c1">$scope</span>.<span class="pl-en">beforeRender</span> <span
+                class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-smi">$view</span>, <span
+                class="pl-smi">$dates</span>, <span class="pl-smi">$leftDate</span>, <span class="pl-smi">$upDate</span>, <span
+                class="pl-smi">$rightDate</span>) {
+    <span class="pl-k">var</span> index <span class="pl-k">=</span> <span class="pl-c1">Math</span>.<span class="pl-c1">floor</span>(<span
+                    class="pl-c1">Math</span>.<span class="pl-c1">random</span>() <span
+                    class="pl-k">*</span> $dates.<span class="pl-c1">length</span>);
+    $dates[index].selectable <span class="pl-k">=</span> <span class="pl-c1">false</span>;
+}</pre>
+        </div>
+
+        <p>The following parameters are supplied by this directive :</p>
+
+        <ul>
+            <li>'$view' the name of the view to be rendered</li>
+            <li>'$dates' a (possibly empty) array of DateObject's (see source) that the user can select in the view.
+            </li>
+            <li>'$leftDate' the DateObject selected if the user clicks the left arrow.</li>
+            <li>'$upDate' the DateObject selected if the user clicks the text between the arrows.</li>
+            <li>'$rightDate' the DateObject selected if the user clicks the right arrow.</li>
+        </ul>
+
+<pre><code>DateObject {
+    utcDateValue: Number - UTC time value of this date object. It does NOT contain time zone information so take that
+    into account when comparing to other dates (or use localDateValue function).
+    localDateValue: FUNCTION that returns a Number - local time value of this date object - same as moment.valueOf() or
+    Date.getTime().
+    display: String - the way this value will be displayed on the calendar.
+    active: true | false | undefined - indicates that date object is part of the model value.
+    selectable: true | false | undefined - indicates that date value is selectable by the user.
+    past: true | false | undefined - indicates that date value is prior to the date range of the current view.
+    future: true | false | undefined - indicates that date value is after the date range of the current view.
+}
+</code></pre>
+
+        <p>Setting the .selectable property of a DateObject to false will prevent the user from being able to select
+            that date value.</p>
+    </section>
+    <section id="onSetTime">
+                <h3>on-set-time</h3>
+                <p>Attribute on datetimepicker element</p>
+                <p>Function. Default: <code>null</code></p>
+
+                <p>If the value of the on-set-time attribute is a function, the date time picker will call this function
+                    passing in the selected value and previous value.</p>
+
+                <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">datetimepicker</span> <span class="pl-e">data-ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>data.date<span class="pl-pds">"</span></span> <span class="pl-e">data-on-set-time</span>=<span class="pl-s"><span class="pl-pds">"</span>onTimeSet(newDate, oldDate)<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">datetimepicker</span>&gt;</pre></div>
+
+                <p>This function will be called when the user selects a value on the minView.</p>
+
+                <div class="highlight highlight-source-js"><pre><span class="pl-c1">$scope</span>.<span class="pl-en">onTimeSet</span> <span class="pl-k">=</span> <span class="pl-k">function</span> (<span class="pl-smi">newDate</span>, <span class="pl-smi">oldDate</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(newDate);
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(oldDate);
+}</pre></div>
+
+                <p>data-on-set-time="onTimeSet()"  &lt;-- This will work</p>
+
+                <p>data-on-set-time="onTimeSet"    &lt;-- <strong>This will NOT work, the ()'s are required</strong></p>
     </section>
 
     <hr/>
 
     <h2>Configuration Options</h2>
     <p>The <strong>datetimepicker-config</strong> attribute defines the configuration options.</p>
-                   <p>This attribute can be an object or a function.</p>
+    <p>This attribute can be an object or a function.</p>
     <section id="minMaxView">
-             <div class="row">
-               <div class="col-sm-6">
-                   <h3>minView</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>minView</h3>
 
-                   <p>String. Default: <code>'minute'</code></p>
-                   <p>The view that will trigger date selection when the user clicks on one of the date/time values.</p>
-               </div>
-               <div class="col-sm-6">
-                   <h3>minuteStep</h3>
-                   <p>Number. Default: <code>5</code></p>
-                   <p>The increment used to build the hour view. A button is created for each minuteStep minutes.</p>
-               </div>
-             </div>
-       </section>
+                <p>String. Default: <code>'minute'</code></p>
+                <p>The view that will trigger date selection when the user clicks on one of the date/time values.</p>
+            </div>
+            <div class="col-sm-6">
+                <h3>minuteStep</h3>
+                <p>Number. Default: <code>5</code></p>
+                <p>The increment used to build the hour view. A button is created for each minuteStep minutes.</p>
+            </div>
+        </div>
+    </section>
     <section id="startView">
-         <div class="row">
-           <div class="col-sm-6">
-               <h3>startView</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>startView</h3>
 
-               <p>String. Default: <code>'day'</code></p>
-               <p>The view that the datetimepicker should show when it is opened.</p>
-               <div class="well">
-               <p>Accepts values of :</p>
-               <dl>
-                 <dt>minute</dt><dd>for the minute view</dd>
-                 <dt>hour</dt><dd>for the hour view</dd>
-                   <dt>day</dt><dd>for the day view (the default)</dd>
-                   <dt>month</dt><dd>for the month view (12-months of the selected year)</dd>
-                   <dt>year</dt><dd>for the year view (12-year range)</dd>
-               </dl>
-               </div>
-           </div>
-           <div class="col-sm-6">
-               <h3>dropdownSelector</h3>
-               <p>String. Default: <code>null</code></p>
-               <p>When used within a Bootstrap dropdown, the selector specified in dropdownSelector will toggle the dropdown when a date/time is selected.</p>
-           </div>
-         </div>
-   </section>
+                <p>String. Default: <code>'day'</code></p>
+                <p>The view that the datetimepicker should show when it is opened.</p>
+                <div class="well">
+                    <p>Accepts values of :</p>
+                    <dl>
+                        <dt>minute</dt>
+                        <dd>for the minute view</dd>
+                        <dt>hour</dt>
+                        <dd>for the hour view</dd>
+                        <dt>day</dt>
+                        <dd>for the day view (the default)</dd>
+                        <dt>month</dt>
+                        <dd>for the month view (12-months of the selected year)</dd>
+                        <dt>year</dt>
+                        <dd>for the year view (12-year range)</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3>dropdownSelector</h3>
+                <p>String. Default: <code>null</code></p>
+
+                <p>When used within a Bootstrap dropdown, the selector specified in dropdownSelector will toggle the
+                    dropdown when a date/time is selected.</p>
+            </div>
+        </div>
+    </section>
 </div>
 
 
@@ -200,25 +281,32 @@
 <p>This project is maintained by <a href="https://github.com/dalelotts">dalelotts</a></p>
 
 <div class="loadingAnimation" data-ng-show="isLoading">
-  <div class="bowl_ringG">
-    <div class="ball_holderG">
-      <div class="ballG">
-      </div>
+    <div class="bowl_ringG">
+        <div class="ball_holderG">
+            <div class="ballG">
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
-<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
-<script type="text/javascript" src="javascripts/datetimepicker.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/dalelotts/angular-bootstrap-datetimepicker/0.3.14/src/js/datetimepicker.js"></script>
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-325325-19', 'dalelotts.github.io');
     ga('send', 'pageview');
