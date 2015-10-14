@@ -221,57 +221,93 @@
     </section>
 
     <hr/>
+    <section id="configuration">
+        <h2>Configuration Options</h2>
+        <p>The <strong>datetimepicker-config</strong> attribute defines the configuration options.</p>
+        <p>This attribute can be an object or a function.</p>
+        <section id="minMaxView">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>minView</h3>
 
-    <h2>Configuration Options</h2>
-    <p>The <strong>datetimepicker-config</strong> attribute defines the configuration options.</p>
-    <p>This attribute can be an object or a function.</p>
-    <section id="minMaxView">
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>minView</h3>
-
-                <p>String. Default: <code>'minute'</code></p>
-                <p>The view that will trigger date selection when the user clicks on one of the date/time values.</p>
-            </div>
-            <div class="col-sm-6">
-                <h3>minuteStep</h3>
-                <p>Number. Default: <code>5</code></p>
-                <p>The increment used to build the hour view. A button is created for each minuteStep minutes.</p>
-            </div>
-        </div>
-    </section>
-    <section id="startView">
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>startView</h3>
-
-                <p>String. Default: <code>'day'</code></p>
-                <p>The view that the datetimepicker should show when it is opened.</p>
-                <div class="well">
-                    <p>Accepts values of :</p>
-                    <dl>
-                        <dt>minute</dt>
-                        <dd>for the minute view</dd>
-                        <dt>hour</dt>
-                        <dd>for the hour view</dd>
-                        <dt>day</dt>
-                        <dd>for the day view (the default)</dd>
-                        <dt>month</dt>
-                        <dd>for the month view (12-months of the selected year)</dd>
-                        <dt>year</dt>
-                        <dd>for the year view (12-year range)</dd>
-                    </dl>
+                    <p>String. Default: <code>'minute'</code></p>
+                    <p>The view that will trigger date selection when the user clicks on one of the date/time values.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3>minuteStep</h3>
+                    <p>Number. Default: <code>5</code></p>
+                    <p>The increment used to build the hour view. A button is created for each minuteStep minutes.</p>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <h3>dropdownSelector</h3>
-                <p>String. Default: <code>null</code></p>
+        </section>
+        <section id="startView">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>startView</h3>
 
-                <p>When used within a Bootstrap dropdown, the selector specified in dropdownSelector will toggle the
-                    dropdown when a date/time is selected.</p>
+                    <p>String. Default: <code>'day'</code></p>
+                    <p>The view that the datetimepicker should show when it is opened.</p>
+                    <div class="well">
+                        <p>Accepts values of :</p>
+                        <dl>
+                            <dt>minute</dt>
+                            <dd>for the minute view</dd>
+                            <dt>hour</dt>
+                            <dd>for the hour view</dd>
+                            <dt>day</dt>
+                            <dd>for the day view (the default)</dd>
+                            <dt>month</dt>
+                            <dd>for the month view (12-months of the selected year)</dd>
+                            <dt>year</dt>
+                            <dd>for the year view (12-year range)</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h3>dropdownSelector</h3>
+                    <p>String. Default: <code>null</code></p>
+
+                    <p>When used within a Bootstrap dropdown, the selector specified in dropdownSelector will toggle the
+                        dropdown when a date/time is selected.</p>
+                </div>
             </div>
-        </div>
+        </section>
     </section>
+    <section id="licenseFAQ">
+        <h1 id="license-faqs" class="page-header">License FAQs</h1>
+        <p class="lead">angular-bootstrap-datetimepicker is released under the MIT license and is copyright 2015 Dale Lotts. Boiled down to smaller chunks, it can be described with the following conditions.</p>
+
+        <h2>It requires you to:</h2>
+        <ul>
+            <li>Keep the license and copyright notice included in angular-bootstrap-datetimepicker's CSS and JavaScript files when you use them in your works</li>
+        </ul>
+
+        <h2>It permits you to:</h2>
+        <ul>
+            <li>Freely download and use angular-bootstrap-datetimepicker, in whole or in part, for personal, private, company internal, or commercial purposes</li>
+            <li>Use angular-bootstrap-datetimepicker in packages or distributions that you create</li>
+            <li>Modify the source code</li>
+            <li>Grant a sublicense to modify and distribute angular-bootstrap-datetimepicker to third parties not included in the license</li>
+        </ul>
+
+        <h2>It forbids you to:</h2>
+        <ul>
+            <li>Hold the authors and license owners liable for damages as angular-bootstrap-datetimepicker is provided without warranty</li>
+            <li>Hold the creators or copyright holders of angular-bootstrap-datetimepicker liable</li>
+            <li>Redistribute any piece of angular-bootstrap-datetimepicker without proper attribution</li>
+            <li>Use any marks owned by Dale Lotts in any way that might state or imply that Dale Lotts endorses your distribution</li>
+            <li>Use any marks owned by Dale Lotts in any way that might state or imply that you created the software in question</li>
+        </ul>
+
+        <h2>It does not require you to:</h2>
+        <ul>
+            <li>Include the source of angular-bootstrap-datetimepicker itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
+            <li>Submit changes that you make to angular-bootstrap-datetimepicker back to the angular-bootstrap-datetimepicker project (though such feedback is encouraged)</li>
+        </ul>
+
+        <p>The full angular-bootstrap-datetimepicker license is located <a href="https://github.com/dalelotts/angular-bootstrap-datetimepicker/blob/master/LICENSE">in the project repository</a> for more information.</p>
+    </section>
+
 </div>
 
 
