@@ -17,7 +17,7 @@
         <h1>Angular Datetime Picker</h1>
 
         <p>Native AngularJS datetime picker directive styled by Twitter Bootstrap</p>
-        <p>version 0.3.14</p>
+        <p>version 0.4.0</p>
 
         <p class="btn-group">
             <a class="btn btn-default" href="https://github.com/dalelotts/angular-bootstrap-datetimepicker"><i
@@ -272,6 +272,28 @@
                 </div>
             </div>
         </section>
+        <section id="eventListeners">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>configureOn</h3>
+
+                    <p>String. Default: <code>null</code></p>
+                    <p>Accepts any string value</p>
+                    <p>Causes the date/time picker to re-read its configuration when the specified event is received.</p>
+                    <p>For example, perhaps the startView option in the configuration has changed and you would like the new
+                        configuration to be used. You can $broadcast the event to cause this directive to use the new configuration.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3>renderOn</h3>
+
+                    <p>String. Default: <code>null</code></p>
+                    <p>Accepts any string value</p>
+                    <p>Causes the date/time picker to re-render its view when the specified event is received.</p>
+                    <p>For example, if you want to disable any dates or times that are in the past. You can $broadcast
+                        the event at an interval to disable times in the past (or any other time valid dates change).</p>
+                </div>
+            </div>
+        </section>
     </section>
     <section id="licenseFAQ">
         <h1 id="license-faqs" class="page-header">License FAQs</h1>
@@ -329,7 +351,7 @@
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/dalelotts/angular-bootstrap-datetimepicker/0.3.14/src/js/datetimepicker.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/dalelotts/angular-bootstrap-datetimepicker/0.4.0/src/js/datetimepicker.js"></script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
