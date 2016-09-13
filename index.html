@@ -10,7 +10,7 @@
     <script src="https://use.fontawesome.com/268d728e7f.js"></script>
 </head>
 
-<body>
+<body data-ng-app="demo">
 
 <header class="jumbotron text-center" id="overview">
     <div class="container">
@@ -132,8 +132,60 @@
         <p>Use bootstrap's dropdown component to display/hide calendar.</p>
         <pre class="prettyprint"><code class="html5"><ol><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"dropdown"</span>&gt;</span></div></li><li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;<span class="kw2">a</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"dropdown-toggle"</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">"dropdown2"</span> role<span class="sy0">=</span><span class="st0">"button"</span> data-toggle<span class="sy0">=</span><span class="st0">"dropdown"</span> data-<span class="kw3">target</span><span class="sy0">=</span><span class="st0">"#"</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">"#"</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"input-group"</span>&gt;&lt;<span class="kw2">input</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">"text"</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"form-control"</span> data-ng-model<span class="sy0">=</span><span class="st0">"data.dateDropDownInput"</span>&gt;&lt;<span class="kw2">span</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"input-group-addon"</span>&gt;&lt;<span class="kw2">i</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"glyphicon glyphicon-calendar"</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">i</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">span</span>&gt;</span></div></li><li class="li2"><div class="de2">&nbsp; &nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">a</span>&gt;</span></div></li><li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;<span class="kw2">ul</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">"dropdown-menu"</span> role<span class="sy0">=</span><span class="st0">"menu"</span> aria-labelledby<span class="sy0">=</span><span class="st0">"dLabel"</span>&gt;</span></div></li><li class="li1"><div class="de1">&nbsp; &nbsp; <span class="sc2">&lt;datetimepicker data-ng-model<span class="sy0">=</span><span class="st0">"data.dateDropDownInput"</span> data-datetimepicker-config<span class="sy0">=</span><span class="st0">"{ dropdownSelector: '#dropdown2' }"</span><span class="sy0">/</span>&gt;</span></div></li><li class="li2"><div class="de2">&nbsp; <span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">ul</span>&gt;</span></div></li><li class="li1"><div class="de1"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span></div></li></ol></code></pre>
     </section>
-
     <hr/>
+
+    <section id="date-range-picker" data-ng-controller="dateRangeController">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Date Range Picker</h3>
+                <p>Use two date pickers to create a date range picker.</p>
+
+                <div class="well">
+                    <div class="dropdown form-group">
+                        <label for="dateRangeStart">Start Date</label>
+                        <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" data-target="#"
+                           href="#">
+                            <div class="input-group date">
+                                <input id="dateRangeStart" type="text" class="form-control" data-ng-model="dateRangeStart">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <datetimepicker data-ng-model="dateRangeStart"
+                                            data-datetimepicker-config="{ dropdownSelector: '#dropdownStart', renderOn: 'end-date-changed' }"
+                                            data-on-set-time="startDateOnSetTime()"
+                                            data-before-render="startDateBeforeRender($dates)"></datetimepicker>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown form-group">
+                        <label for="dateRangeStart">End Date</label>
+                        <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" data-target="#"
+                           href="#">
+                            <div class="input-group date">
+                                <input type="text" class="form-control" data-ng-model="dateRangeEnd">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <datetimepicker data-ng-model="dateRangeEnd"
+                                            data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd', renderOn: 'start-date-changed' }"
+                                            data-on-set-time="endDateOnSetTime()"
+                                            data-before-render="endDateBeforeRender($view, $dates, $leftDate, $upDate, $rightDate)"></datetimepicker>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3>Why?</h3>
+
+                <p>Prevent the user from accidentally selecting an end date that is before the start date.</p>
+
+                <h3>How?</h3>
+                <p>See the <a href="https://github.com/dalelotts/angular-bootstrap-datetimepicker#create-a-date-range-picker-with-validation-controls">Read me file</a></p>
+            </div>
+        </div>
+   </section>
 
     <h2>Callback functions</h2>
     <section id="beforeRender">
@@ -349,6 +401,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/dalelotts/angular-bootstrap-datetimepicker/master/src/js/datetimepicker.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/dalelotts/angular-bootstrap-datetimepicker/master/src/js/datetimepicker.templates.js"></script>
+<script type="text/javascript" src="javascripts/app.js"></script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
