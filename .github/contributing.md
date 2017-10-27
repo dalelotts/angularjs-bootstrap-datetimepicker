@@ -9,8 +9,8 @@ Contributing code
 To contribute, fork the library and install gulp and dependencies. You need [node](http://nodejs.org/); use [nvm](https://github.com/creationix/nvm) or [nenv](https://github.com/ryuone/nenv) to install it.
 
 ```shell
-git clone https://github.com/dalelotts/angular-bootstrap-datetimepicker.git
-cd angular-bootstrap-datetimepicker
+git clone https://github.com/dalelotts/angularjs-bootstrap-datetimepicker.git
+cd angularjs-bootstrap-datetimepicker
 npm install
 git checkout -b my-fix-branch develop  # all patches against develop branch, please!
 npm test              # this runs lint, complexity checks, and unit tests.
@@ -36,9 +36,9 @@ We use Gulp for managing the build. Here are some useful Gulp tasks:
   * `gulp css-lint` Lint the css files after generating.
   * `gulp templatecache` Generates src/js/datetimepicker.templates.js. You must re-add the IIFE around the generated code after it is generated (PR to fix this would be apprecaited)
 
-# Contributing to angular-bootstrap-datetimepicker
+# Contributing to angularjs-bootstrap-datetimepicker
 
-We'd love for you to contribute to our source code and to make angular-bootstrap-datetimepicker even better than it is
+We'd love for you to contribute to our source code and to make angularjs-bootstrap-datetimepicker even better than it is
 today! Here are the guidelines we'd like you to follow:
 
  - [Question or Problem?](#question)
@@ -52,7 +52,7 @@ today! Here are the guidelines we'd like you to follow:
 
 ## <a name="question"></a> Got a Question or Problem?
 
-If you have questions about how to use angular-bootstrap-datetimepicker, please direct these to the [Gitter Chat Group][gitter].
+If you have questions about how to use angularjs-bootstrap-datetimepicker, please direct these to the [Gitter Chat Group][gitter].
 
 ## <a name="issue"></a> Found an Issue?
 
@@ -143,7 +143,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-In GitHub, send a pull request to `angular-bootstrap-datetimepicker:develop`.
+In GitHub, send a pull request to `angularjs-bootstrap-datetimepicker:develop`.
 If we suggest changes, then:
 
 * Make the required updates.
@@ -203,7 +203,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted.  This leads to **more
 readable messages** that are easy to follow when looking through the **project history**.  But also,
-we use the git commit messages to **generate the angular-bootstrap-datetimepicker change log**.
+we use the git commit messages to **generate the angularjs-bootstrap-datetimepicker change log**.
 
 The commit message formatting can be added using a typical git workflow or through the use of a CLI wizard ([Commitizen](https://github.com/commitizen/cz-cli)). To use the wizard, run `npm run commit` in your terminal after staging your changes in git.
 
@@ -263,10 +263,10 @@ reference GitHub issues that this commit **Closes**.
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
 
 
-[github]: https://github.com/dalelotts/angular-bootstrap-datetimepicker
-[gitter]: https://gitter.im/dalelotts/angular-bootstrap-datetimepicker
-[issues]: https://github.com/dalelotts/angular-bootstrap-datetimepicker/issues
-[pulls]: https://github.com/dalelotts/angular-bootstrap-datetimepicker/pulls
+[github]: https://github.com/dalelotts/angularjs-bootstrap-datetimepicker
+[gitter]: https://gitter.im/dalelotts/angularjs-bootstrap-datetimepicker
+[issues]: https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/issues
+[pulls]: https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/pulls
 [momentI18N]: http://momentjs.com/docs/#/i18n/
 
 [jsfiddle]: http://jsfiddle.net/

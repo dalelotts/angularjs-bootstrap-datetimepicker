@@ -1,5 +1,5 @@
 {
-  "name": "angular-bootstrap-datetimepicker",
+  "name": "angularjs-bootstrap-datetimepicker",
   "version": "0.0.0-semantic-release",
   "description": "This directive allows you to add a datetime-picker to your form elements.",
   "keywords": [
@@ -12,12 +12,12 @@
     "time picker",
     "time"
   ],
-  "author": "https://github.com/dalelotts/angular-bootstrap-datetimepicker/graphs/contributors",
+  "author": "https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/graphs/contributors",
   "bugs": {
-    "url": "https://github.com/dalelotts/angular-bootstrap-datetimepicker/issues"
+    "url": "https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/issues"
   },
   "license": "MIT",
-  "homepage": "http://dalelotts.github.io/angular-bootstrap-datetimepicker",
+  "homepage": "http://dalelotts.github.io/angularjs-bootstrap-datetimepicker",
   "main": "index.js",
   "style": "src/css/datetimepicker.css",
   "scss": "src/scss/datetimepicker.scss",
@@ -85,7 +85,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dalelotts/angular-bootstrap-datetimepicker.git"
+    "url": "https://github.com/dalelotts/angularjs-bootstrap-datetimepicker.git"
   },
   "config": {
     "commitizen": {

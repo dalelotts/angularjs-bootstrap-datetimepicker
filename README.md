@@ -2,22 +2,22 @@
 
 Native AngularJS datetime picker directive styled by Twitter Bootstrap 3
 
-[![Join the chat at https://gitter.im/dalelotts/angular-bootstrap-datetimepicker](https://badges.gitter.im/dalelotts/angular-bootstrap-datetimepicker.svg)](https://gitter.im/dalelotts/angular-bootstrap-datetimepicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/dalelotts/angularjs-bootstrap-datetimepicker](https://badges.gitter.im/dalelotts/angularjs-bootstrap-datetimepicker.svg)](https://gitter.im/dalelotts/angularjs-bootstrap-datetimepicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![MIT License][license-image]][license-url]
-[![Build Status](https://travis-ci.org/dalelotts/angular-bootstrap-datetimepicker.png?branch=master)](https://travis-ci.org/dalelotts/angular-bootstrap-datetimepicker)
-[![Coverage Status](https://coveralls.io/repos/github/dalelotts/angular-bootstrap-datetimepicker/badge.svg?branch=master)](https://coveralls.io/github/dalelotts/angular-bootstrap-datetimepicker?branch=master)
-[![Dependency Status](https://david-dm.org/dalelotts/angular-bootstrap-datetimepicker.svg)](https://david-dm.org/dalelotts/angular-bootstrap-datetimepicker)
-[![devDependency Status](https://david-dm.org/dalelotts/angular-bootstrap-datetimepicker/dev-status.png)](https://david-dm.org/dalelotts/angular-bootstrap-datetimepicker#info=devDependencies)
+[![Build Status](https://travis-ci.org/dalelotts/angularjs-bootstrap-datetimepicker.png?branch=master)](https://travis-ci.org/dalelotts/angularjs-bootstrap-datetimepicker)
+[![Coverage Status](https://coveralls.io/repos/github/dalelotts/angularjs-bootstrap-datetimepicker/badge.svg?branch=master)](https://coveralls.io/github/dalelotts/angularjs-bootstrap-datetimepicker?branch=master)
+[![Dependency Status](https://david-dm.org/dalelotts/angularjs-bootstrap-datetimepicker.svg)](https://david-dm.org/dalelotts/angularjs-bootstrap-datetimepicker)
+[![devDependency Status](https://david-dm.org/dalelotts/angularjs-bootstrap-datetimepicker/dev-status.png)](https://david-dm.org/dalelotts/angularjs-bootstrap-datetimepicker#info=devDependencies)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Known Vulnerabilities](https://snyk.io/test/npm/angular-bootstrap-datetimepicker/badge.svg)](https://snyk.io/test/npm/angular-bootstrap-datetimepicker)
+[![Known Vulnerabilities](https://snyk.io/test/npm/angularjs-bootstrap-datetimepicker/badge.svg)](https://snyk.io/test/npm/angularjs-bootstrap-datetimepicker)
 [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellow)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=F3FX5W6S2U4BW&lc=US&item_name=Dale%20Lotts&item_number=angular%2dbootstrap%2ddatetimepicker&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted "Donate one-time to this project using Paypal")
-<a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&amp;text=Check%20out%20this%20%23AngularJS%20directive%20that%20makes%20it%20dead%20simple%20for%20users%20to%20select%20dates%20%26%20times&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdalelotts%2Fangular-bootstrap-datetimepicker&amp;via=dalelotts" target="_blank">
+<a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&amp;text=Check%20out%20this%20%23AngularJS%20directive%20that%20makes%20it%20dead%20simple%20for%20users%20to%20select%20dates%20%26%20times&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdalelotts%2Fangularjs-bootstrap-datetimepicker&amp;via=dalelotts" target="_blank">
   <img src="http://jpillora.com/github-twitter-button/img/tweet.png"></img>
 </a>
 
-[Home / demo page](http://dalelotts.github.io/angular-bootstrap-datetimepicker/)
+[Home / demo page](http://dalelotts.github.io/angularjs-bootstrap-datetimepicker/)
 
 ## Support the project
 I know this is a tiny directive but many people use it in production (high 5 to all of us) - if you happen to use this directive please click the star button (at the top of the page) - it means a lot to all the contributors.
@@ -42,7 +42,7 @@ bower.json file to allow wiredep to use this directive.
 
 ```json
   "overrides": {
-    "angular-bootstrap-datetimepicker": {
+    "angularjs-bootstrap-datetimepicker": {
       "main": [
         "src/js/datetimepicker.js",
         "src/js/datetimepicker.templates.js",
@@ -128,24 +128,24 @@ Make sure Chrome is available or change the browsers setting in karma.config.js
 We use npm for dependency management, run
 
 ```shell
-npm install --save angular-bootstrap-datetimepicker
+npm install --save angularjs-bootstrap-datetimepicker
 ```
 
-This will copy the angular-bootstrap-datetimepicker files into your components folder, along with its dependencies.
+This will copy the angularjs-bootstrap-datetimepicker files into your components folder, along with its dependencies.
 
 Add the css:
 
 ```html
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" href="node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+<link rel="stylesheet" href="node_modules/angularjs-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
 ```
 
 Load the script files in your application:
 ```html
 <script type="text/javascript" src="node_modules/moment/moment.js"></script>
 <script type="text/javascript" src="node_modules/angular/angular.js"></script>
-<script type="text/javascript" src="node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
-<script type="text/javascript" src="node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+<script type="text/javascript" src="node_modules/angularjs-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+<script type="text/javascript" src="node_modules/angularjs-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
 ```
 
 Add the date module as a dependency to your application module:
@@ -318,11 +318,11 @@ When used within a Bootstrap dropdown and jQuery, the selector specified in drop
 
 
 ## Working with ng-model
-The angular-bootstrap-datetimepicker directive requires ng-model and the picked date/time is automatically synchronized with the model value.
+The angularjs-bootstrap-datetimepicker directive requires ng-model and the picked date/time is automatically synchronized with the model value.
 
 This directive also plays nicely with validation directives such as ng-required.
 
-The angular-bootstrap-datetimepicker directive stores and expects the model value to be a standard javascript Date object.
+The angularjs-bootstrap-datetimepicker directive stores and expects the model value to be a standard javascript Date object.
 
 ## ng-required directive
 If you apply the required directive to element then the form element is invalid until a date is picked.
@@ -516,35 +516,35 @@ You can change the format by setting moment to the desired locale, or creating a
 
 ## Year view
 
-![Datetimepicker year view](https://raw.github.com/dalelotts/angular-bootstrap-datetimepicker/master/screenshots/year.png)
+![Datetimepicker year view](https://raw.github.com/dalelotts/angularjs-bootstrap-datetimepicker/master/screenshots/year.png)
 
 This view allows the user to select the year for the target date.
 If the year view is the minView, the date will be set to midnight on the first day of the year
 
 ## Month view
 
-![Datetimepicker month view](https://raw.github.com/dalelotts/angular-bootstrap-datetimepicker/master/screenshots/month.png)
+![Datetimepicker month view](https://raw.github.com/dalelotts/angularjs-bootstrap-datetimepicker/master/screenshots/month.png)
 
 This view allows the user to select the month in the selected year.
 If the month view is the minView, the date will be set to midnight on the first day of the month.
 
 ## Day view (Default)
 
-![Datetimepicker day view](https://raw.github.com/dalelotts/angular-bootstrap-datetimepicker/master/screenshots/day.png)
+![Datetimepicker day view](https://raw.github.com/dalelotts/angularjs-bootstrap-datetimepicker/master/screenshots/day.png)
 
 This view allows the user to select the the day of the month, in the selected month.
 If the day view is the minView, the date will be set to midnight on the day selected.
 
 ## Hour view
 
-![Datetimepicker hour view](https://raw.github.com/dalelotts/angular-bootstrap-datetimepicker/master/screenshots/hour.png)
+![Datetimepicker hour view](https://raw.github.com/dalelotts/angularjs-bootstrap-datetimepicker/master/screenshots/hour.png)
 
 This view allows the user to select the hour of the day, on the selected day.
 If the hour view is the minView, the date will be set to the beginning of the hour on the day selected.
 
 ## Minute view
 
-![Datetimepicker minute view](https://raw.github.com/dalelotts/angular-bootstrap-datetimepicker/master/screenshots/minute.png)
+![Datetimepicker minute view](https://raw.github.com/dalelotts/angularjs-bootstrap-datetimepicker/master/screenshots/minute.png)
 
 This view allows the user to select a specific time of day, in the selected hour.
 By default, the time is displayed in 5 minute increments. The <code>minuteStep</code> property controls the increments of time displayed.
@@ -552,37 +552,37 @@ If the minute view is the minView, which is is by default, the date will be set 
 
 ## Contributing
 
-See [Contributing.md](https://github.com/dalelotts/angular-bootstrap-datetimepicker/blob/master/.github/contributing.md)
+See [Contributing.md](https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/blob/master/.github/contributing.md)
 
 ## License
 
-angular-bootstrap-datetimepicker is released under the MIT license and is copyright 2015 Knight Rider Consulting, Inc.. Boiled down to smaller chunks, it can be described with the following conditions.
+angularjs-bootstrap-datetimepicker is released under the MIT license and is copyright 2015 Knight Rider Consulting, Inc.. Boiled down to smaller chunks, it can be described with the following conditions.
 
 ## It requires you to:
 
-* Keep the license and copyright notice included in angular-bootstrap-datetimepicker's CSS and JavaScript files when you use them in your works
+* Keep the license and copyright notice included in angularjs-bootstrap-datetimepicker's CSS and JavaScript files when you use them in your works
 
 ## It permits you to:
 
-* Freely download and use angular-bootstrap-datetimepicker, in whole or in part, for personal, private, company internal, or commercial purposes
-* Use angular-bootstrap-datetimepicker in packages or distributions that you create
+* Freely download and use angularjs-bootstrap-datetimepicker, in whole or in part, for personal, private, company internal, or commercial purposes
+* Use angularjs-bootstrap-datetimepicker in packages or distributions that you create
 * Modify the source code
-* Grant a sublicense to modify and distribute angular-bootstrap-datetimepicker to third parties not included in the license
+* Grant a sublicense to modify and distribute angularjs-bootstrap-datetimepicker to third parties not included in the license
 
 ## It forbids you to:
 
-* Hold the authors and license owners liable for damages as angular-bootstrap-datetimepicker is provided without warranty
-* Hold the creators or copyright holders of angular-bootstrap-datetimepicker liable
-* Redistribute any piece of angular-bootstrap-datetimepicker without proper attribution
+* Hold the authors and license owners liable for damages as angularjs-bootstrap-datetimepicker is provided without warranty
+* Hold the creators or copyright holders of angularjs-bootstrap-datetimepicker liable
+* Redistribute any piece of angularjs-bootstrap-datetimepicker without proper attribution
 * Use any marks owned by Knight Rider Consulting, Inc. in any way that might state or imply that Knight Rider Consulting, Inc. endorses your distribution
 * Use any marks owned by Knight Rider Consulting, Inc. in any way that might state or imply that you created the Knight Rider Consulting, Inc. software in question
 
 ## It does not require you to:
 
-* Include the source of angular-bootstrap-datetimepicker itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
-* Submit changes that you make to angular-bootstrap-datetimepicker back to the angular-bootstrap-datetimepicker project (though such feedback is encouraged)
+* Include the source of angularjs-bootstrap-datetimepicker itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
+* Submit changes that you make to angularjs-bootstrap-datetimepicker back to the angularjs-bootstrap-datetimepicker project (though such feedback is encouraged)
 
-The full angular-bootstrap-datetimepicker license is located [in the project repository](https://github.com/dalelotts/angular-bootstrap-datetimepicker/blob/master/LICENSE) for more information.
+The full angularjs-bootstrap-datetimepicker license is located [in the project repository](https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/blob/master/LICENSE) for more information.
 
 
 ## Donating

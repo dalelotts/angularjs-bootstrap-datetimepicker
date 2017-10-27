@@ -1,8 +1,8 @@
 ### Is this Support Question?
-A support question starts with `how`, `why`, or some other statement indicating you are trying to undertand how to use this directive.
+A support question starts with `how`, `why`, or some other statement indicating you are trying to understand how to use this directive.
 For support questions, please use one of these channels: 
-Gitter: https://gitter.im/dalelotts/angular-bootstrap-datetimepicker
-Stack Overflow: http://stackoverflow.com/search?q=angular-bootstrap-datetimepicker
+Gitter: https://gitter.im/dalelotts/angularjs-bootstrap-datetimepicker
+Stack Overflow: http://stackoverflow.com/search?q=angularjs-bootstrap-datetimepicker
 
 **Support questions will be CLOSED without explanation.**
 
@@ -17,11 +17,11 @@ Comments like "+1" or "when will this be done?" will be ignored. Only 👍 react
 
 **Duplicate issues will be CLOSED without explanation.**
 
-Instructions: https://github.com/dalelotts/angular-bootstrap-datetimepicker/wiki/Reporting-Bugs
+Instructions: https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/wiki/Reporting-Bugs
 
 * __Overview of the Issue__ - if an error is being thrown a non-minified stack trace helps
 * __Motivation for or Use Case__ - explain why this is a bug for you
-* __angular-bootstrap-datetimepicker Version(s)__ - is it a regression?
+* __angularjs-bootstrap-datetimepicker Version(s)__ - is it a regression?
 * __Browsers and Operating System__ - is this a problem with all browsers or only specific ones?
 * __Link to a live example__ (Required) - provide a live example (using JSBin, Plunker or JSFiddle.
 * __Related Issues__ - has a similar issue been reported before?
@@ -30,6 +30,6 @@ Instructions: https://github.com/dalelotts/angular-bootstrap-datetimepicker/wiki
   
 ### Feature Requests
 Search the issue tracker for an existing ticket before creating a new one.
-Instructions: https://github.com/dalelotts/angular-bootstrap-datetimepicker/wiki/Requesting-Features
+Instructions: https://github.com/dalelotts/angularjs-bootstrap-datetimepicker/wiki/Requesting-Features
 
 (Please erase the above text and begin typing. Thanks!)

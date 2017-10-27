@@ -1,7 +1,7 @@
 /* globals describe, beforeEach, it, expect, module, inject, jQuery, moment, spyOn */
 
 /**
- * @license angular-bootstrap-datetimepicker
+ * @license angularjs-bootstrap-datetimepicker
  * Copyright 2014 Knight Rider Consulting, Inc. http://www.knightrider.com
  * License: MIT
  *
