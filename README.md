@@ -103,8 +103,8 @@ This example will not work with will not work with jQuery3.
 # Dependencies
 
 Requires:
- * AngularJS 1.4.x or higher (1.0.x will not work)
- * moment.js 2.8.3 or higher for date parsing and formatting
+ * AngularJS 1.6.3 or higher (1.0.x will not work)
+ * moment.js 2.18.1 or higher for date parsing and formatting
  * bootstrap's glyphicons for arrows (Can be overridden in css)
  
 optional:
