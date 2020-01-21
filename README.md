@@ -21,7 +21,7 @@ Native AngularJS datetime picker directive styled by Twitter Bootstrap 3
 
 ## Archived 
 
-This is project is no longer updated or supported, please consider using the lattest [angular-bootstrap-datetimepicker](https://github.com/dalelotts/angular-bootstrap-datetimepicker) instead.
+This is project is no longer updated or supported, please consider using the latest [angular-bootstrap-datetimepicker](https://github.com/dalelotts/angular-bootstrap-datetimepicker) instead.
 
 ## Support the project
 I know this is a tiny directive but many people use it in production (high 5 to all of us) - if you happen to use this directive please click the star button (at the top of the page) - it means a lot to all the contributors.
